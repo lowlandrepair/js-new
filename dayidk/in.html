@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson32</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 4px #fff7;
+        }
+        p {
+            background: #fff8;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #0001;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        button {
+            background: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 32px;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 4px 14px #ff7e5f44;
+            transition: background 0.2s, transform 0.2s;
+            margin: 16px 0;
+        }
+        button:hover {
+            background: #feb47b;
+            transform: translateY(-2px) scale(1.05);
+        }
+        #demo, #demo1 {
+            font-weight: bold;
+            color: #2d3436;
+        }
+    </style>
+</head>
+<body>
+    <h1>Regular Expressions</h1>
+    <p id="p00">Search a string for digital school, and display the position:</p>
+    <p id="demo"></p>
+    <p>Reaplace Valmir with Mergim in the pharagraph below: </p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <p id="demo1">Please visit kosova</p>
+    <p id="p01">the best things in life are free</p>
+    <p id="demo2"></p>
+    <p id="p02">Here are some example sentences.</p>
+    <p id="demo3"></p>
+    <script src="x.js"></script>
+    <script>
+        let text2 = document.getElementById("p01").innerHTML;
+        const pattern = /e/;
+        document.getElementById("demo2").innerHTML = pattern.test(text2);
+        let text3 = document.getElementById("p02").innerHTML;
+        const matchs = text3.match(/e/g);
+        document.getElementById("demo3").innerHTML = matchs ? matchs.join(", ") : "No Matches";
+    </script>
+</body>
+</html>
