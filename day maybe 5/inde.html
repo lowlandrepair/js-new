@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styyle.css">
+</head>
+
+<body>
+    <div id="wachamacallit">
+        <form id="form" onsubmit="event.preventDefault(); validation();">
+            <div class="form-container" id="name-container">
+                <label for="name" style="color: white;">Name:</label>
+                <input id="name" type="text" name="name" placeholder="Enter your name">
+                <span id="name-error">It is not good, type it again</span>
+                <span id="name-correct">Looks good!</span>
+            </div>
+            <div class="form-container" id="age-container">
+                <label for="age" style="color: white;">Age:</label>
+                <input id="age" type="text" name="age" placeholder="Enter your age">
+                <span id="age-error">Please enter a valid age</span>
+                <span id="age-correct">Age looks good!</span>
+            </div>
+            <div class="form-container" id="city-container">
+                <label for="city" style="color: white;">City:</label>
+                <select id="city" name="city">
+                    <option value="">Select your city</option>
+                    <option value="New York">New York</option>
+                    <option value="mitia">flori</option>
+                    <option value="fatmirja">fatmirja</option>
+                    <option value="liridona">liridona</option>
+                    <option value="buqe">lule</option>
+                    <!-- Add more cities as needed -->
+                </select>
+                <span id="city-error">Please select a city</span>
+                <span id="city-correct">City looks good!</span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="stars"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <script src="mains.js"></script>
+</body>
+
+</html>
